@@ -1,6 +1,4 @@
-﻿using Captcha.Api.Interfaces;
-using static System.Net.Mime.MediaTypeNames;
-using System.Drawing;
+﻿using Captcha.Api.Interfaces;using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;
 
@@ -12,7 +10,7 @@ public class CaptchaService: ICaptchaService
     {
         int height = 30;
         int width = 70;
-        Bitmap bmp = new Bitmap(width, height, PixelFormat.Max);
+        Bitmap bmp = new Bitmap(width, height, PixelFormat.Format32bppArgb);
         Graphics g = Graphics.FromImage(bmp);
 
         g.Clear(Color.White);

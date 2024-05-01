@@ -1,6 +1,5 @@
 ﻿using Captcha.Api.Interfaces;
 using Captcha.Api.Services.Captcha;
-
 namespace Captcha.Api.Extensions;
 
 public static class IOC
