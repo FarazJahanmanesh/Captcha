@@ -1,6 +1,6 @@
 ﻿namespace Captcha.Api.Models;
 
-public class ActionResponse<T> : IActionResponse
+public record ActionResponse<T> : IActionResponse
 {
     public ActionResponse()
     {
@@ -12,7 +12,7 @@ public class ActionResponse<T> : IActionResponse
     public ResponseStateEnum State { get; set; }
     public List<string> Errors { get; set; }
 }
-public class ActionResponse : IActionResponse
+public record ActionResponse : IActionResponse
 {
     public ActionResponse()
     {

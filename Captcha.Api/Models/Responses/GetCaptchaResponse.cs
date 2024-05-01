@@ -1,5 +1,3 @@
 ﻿namespace Captcha.Api.Models.Responses;
 
-public class GetCaptchaResponse
-{
-}
+public record GetCaptchaResponse(string ImgBase64);
