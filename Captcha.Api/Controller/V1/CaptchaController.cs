@@ -10,6 +10,7 @@ namespace Captcha.Api.Controller.V1
         public async Task<IActionResult> GetCaptcha()
         {
             var response = new ActionResponse<GetCaptchaResponse>();
+
             return Ok();
         }
     }

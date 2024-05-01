@@ -2,4 +2,5 @@
 
 public interface ICaptchaService
 {
+    string GenerateCaptcha(string captchaStr);
 }
