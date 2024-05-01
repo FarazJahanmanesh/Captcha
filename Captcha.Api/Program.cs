@@ -1,20 +1,23 @@
 using Captcha.Api.Extensions;
+using Microsoft.AspNetCore.Builder;
+using Swashbuckle.AspNetCore.SwaggerUI;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+builder.Services.AddCors();
+
+builder.Services.RegisterServices();
+
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen();
 
-builder.Services.RegisterServices();
-
 var app = builder.Build();
 
-
 app.UseSwagger();
-app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
